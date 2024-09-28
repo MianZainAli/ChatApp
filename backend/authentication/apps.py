@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class MessagesConfig(AppConfig):
+class AuthenticationConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'Messages'
+    name = 'authentication'
