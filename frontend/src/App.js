@@ -1,12 +1,13 @@
 import './App.css';
+import { RouterProvider } from 'react-router-dom';
 import Chat from './components/Chat';
+import router from './router/router';
 
 function App() {
   return (
-    <div>
-        <h1>Chat App</h1>
-        <Chat roomName="default" />
-    </div>
+    <>
+      <RouterProvider router={router}></RouterProvider>
+    </>
 );
 }
 

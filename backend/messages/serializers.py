@@ -2,6 +2,9 @@ from rest_framework import serializers
 from .models import Message
 
 class MessageSerializer(serializers.ModelSerializer):
+    sender = serializers.CharField(source='sender.username')
+    receiver = serializers.CharField(source='receiver.username')
+
     class Meta:
         model = Message
-        fields = '__all__'
+        fields = ['sender', 'receiver', 'content']
