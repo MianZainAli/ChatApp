@@ -37,6 +37,6 @@ class LoginView(APIView):
     
 
 class UserListView(ListAPIView):
-    permission_classes = [IsAuthenticated]
+    permission_classes = [AllowAny]
     queryset = User.objects.all()
     serializer_class = UserSerializer
